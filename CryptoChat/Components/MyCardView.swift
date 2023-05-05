@@ -86,7 +86,7 @@ struct MyCardView_Previews: PreviewProvider {
     static var previews: some View {
         MyCardView()
             .getPreview()
-            .frame(width: 150, height: 200)
+            .frame(width: 130, height: 170)
             .previewLayout(.sizeThatFits)
         
     }

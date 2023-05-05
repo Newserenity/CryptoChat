@@ -10,51 +10,169 @@ import SnapKit
 
 final class ViewController: UIViewController {
     
-    lazy var topStackView: UIStackView = {
+    lazy var topSearchBar: UIStackView = {
         let stackView = UIStackView()
         
-        stackView.spacing = 10
         stackView.alignment = .center
         stackView.axis = .horizontal
-        stackView.distribution = .fillEqually
+        stackView.distribution = .fillProportionally
+        stackView.backgroundColor = .white
+        
+        stackView.layer.cornerRadius = 55/2
+        
+        stackView.layer.masksToBounds = false
+        stackView.layer.shadowRadius = 3
+        stackView.layer.shadowOpacity = 1
+        stackView.layer.shadowColor = UIColor.systemGray4.cgColor
+        stackView.layer.shadowOffset = CGSize(width: 0 , height: 2)
+        
         
         return stackView
     }()
     
+    lazy var searchImageView: UIImageView = {
+        let imageView = UIImageView()
+        
+        imageView.image = UIImage(systemName: "magnifyingglass")
+        imageView.contentMode = .scaleAspectFit
+        UIImageView.appearance().tintColor = .black
+        
+        return imageView
+    }()
+    
+    lazy var searchBarTextFiled: UITextField = {
+        let searchTextFiled = UITextField()
+        
+        searchTextFiled.placeholder = "キーワードで検索"
+        searchTextFiled.font = .systemFont(ofSize: 14)
+        UITextField.appearance().tintColor = .black
+        
+        return searchTextFiled
+    }()
+    
+    lazy var topCategory: UIStackView = {
+        let stackView = UIStackView()
+        
+        stackView.alignment = .center
+        stackView.axis = .vertical
+        
+        return stackView
+    }()
+    
+    lazy var topCategoryImage1: UIImageView = {
+        let imageView = UIImageView()
+        
+        imageView.image = UIImage(systemName: "magnifyingglass")
+        imageView.contentMode = .scaleAspectFit
+        UIImageView.appearance().tintColor = .black
+        
+        return imageView
+    }()
+    
+    lazy var topCategoryImage2: UIImageView = {
+        let imageView = UIImageView()
+        
+        imageView.image = UIImage(systemName: "magnifyingglass")
+        imageView.contentMode = .scaleAspectFit
+        UIImageView.appearance().tintColor = .black
+        
+        return imageView
+    }()
+    
+    lazy var topCategoryImage3: UIImageView = {
+        let imageView = UIImageView()
+        
+        imageView.image = UIImage(systemName: "magnifyingglass")
+        imageView.contentMode = .scaleAspectFit
+        UIImageView.appearance().tintColor = .black
+        
+        return imageView
+    }()
+    
+    lazy var topCategoryImage4: UIImageView = {
+        let imageView = UIImageView()
+        
+        imageView.image = UIImage(systemName: "magnifyingglass")
+        imageView.contentMode = .scaleAspectFit
+        UIImageView.appearance().tintColor = .black
+        
+        return imageView
+    }()
+    
+    lazy var topCategoryImage5: UIImageView = {
+        let imageView = UIImageView()
+        
+        imageView.image = UIImage(systemName: "magnifyingglass")
+        imageView.contentMode = .scaleAspectFit
+        UIImageView.appearance().tintColor = .black
+        
+        return imageView
+    }()
+    
+    lazy var topCategoryImage6: UIImageView = {
+        let imageView = UIImageView()
+        
+        imageView.image = UIImage(systemName: "magnifyingglass")
+        imageView.contentMode = .scaleAspectFit
+        UIImageView.appearance().tintColor = .black
+        
+        return imageView
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.view.backgroundColor = .white
+        delegateConfig()
+        UIConfig()
         
-        let firstElement = MyCardView.generateMyCardView()
-        let secondElement = MyCardView.generateMyCardView()
-        let thirdElement = MyCardView.generateMyCardView()
+        self.view.addSubview(topSearchBar)
+        topSearchBar.addSubview(searchImageView)
+        topSearchBar.addSubview(searchBarTextFiled)
         
-        topStackView.addArrangedSubview(firstElement)
-        topStackView.addArrangedSubview(secondElement)
-        topStackView.addArrangedSubview(thirdElement)
-        
-        self.view.addSubview(topStackView)
-        topStackView.spacing = 7
-        
-        // 오토레이아웃 스냅킷 사용
-        topStackView.snp.makeConstraints {
+        autolayout()
+    }
+    
+    private func delegateConfig() {
+        searchBarTextFiled.delegate = self
+    }
+    
+    private func UIConfig() {
+        self.view.backgroundColor = .systemGray6
+    }
+    
+    private func autolayout() {
+        topSearchBar.snp.makeConstraints {
             $0.top.equalTo(self.view.safeAreaLayoutGuide)
             $0.centerX.equalToSuperview()
-            $0.left.equalToSuperview().offset(10)
+            $0.left.equalToSuperview().offset(15)
+            $0.height.equalTo(55)
         }
         
-        // 겹치는 코드 리팩토링 방법 찾기?
-        firstElement.snp.makeConstraints {
-            $0.height.equalTo(170)
+        searchImageView.snp.makeConstraints {
+            $0.left.equalToSuperview().offset(20)
+            $0.width.equalTo(20)
+            $0.centerY.equalToSuperview()
         }
-        secondElement.snp.makeConstraints {
-            $0.height.equalTo(170)
+        
+        searchBarTextFiled.snp.makeConstraints {
+            $0.left.equalTo(searchImageView.snp.right).offset(10)
+            $0.centerY.equalToSuperview()
+            $0.right.equalToSuperview().offset(-40)
+            $0.height.equalTo(30)
+            
         }
-        thirdElement.snp.makeConstraints {
-            $0.height.equalTo(170)
-        }
+    }
+}
+
+extension ViewController: UITextFieldDelegate {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.searchBarTextFiled.resignFirstResponder()
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.searchBarTextFiled.resignFirstResponder()
+        
+        return true
     }
 }
 
