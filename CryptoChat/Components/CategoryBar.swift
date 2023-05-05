@@ -83,38 +83,37 @@ final class CategoryBar: UIStackView {
     // 레이아웃 설정
     fileprivate func layoutConfig() {
         // layout
-        self.alignment = .firstBaseline
-        self.distribution = .fillEqually
+        self.alignment = .fill
+        self.distribution = .equalSpacing
         self.axis = .horizontal
         self.spacing = 10
-        self.alignment = .center
         
         //add subview
-        self.addSubview(topCategoryImage1)
-        self.addSubview(topCategoryImage2)
-        self.addSubview(topCategoryImage3)
-        self.addSubview(topCategoryImage4)
-        self.addSubview(topCategoryImage5)
-        self.addSubview(topCategoryImage6)
+        self.addArrangedSubview(topCategoryImage1)
+        self.addArrangedSubview(topCategoryImage2)
+        self.addArrangedSubview(topCategoryImage3)
+        self.addArrangedSubview(topCategoryImage4)
+        self.addArrangedSubview(topCategoryImage5)
+        self.addArrangedSubview(topCategoryImage6)
         
         // autolayout
         topCategoryImage1.snp.makeConstraints {
-            $0.size.equalTo(20)
+            $0.size.equalTo(30)
         }
         topCategoryImage2.snp.makeConstraints {
-            $0.size.equalTo(20)
+            $0.size.equalTo(30)
         }
         topCategoryImage3.snp.makeConstraints {
-            $0.size.equalTo(20)
+            $0.size.equalTo(30)
         }
         topCategoryImage4.snp.makeConstraints {
-            $0.size.equalTo(20)
+            $0.size.equalTo(30)
         }
         topCategoryImage5.snp.makeConstraints {
-            $0.size.equalTo(20)
+            $0.size.equalTo(30)
         }
         topCategoryImage6.snp.makeConstraints {
-            $0.size.equalTo(20)
+            $0.size.equalTo(30)
         }
     }
 }

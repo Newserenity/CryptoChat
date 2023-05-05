@@ -13,10 +13,12 @@ final class ViewController: UIViewController {
     lazy var topSearchBar: UIStackView = {
         let stackView = UIStackView()
         
+        stackView.distribution = .fill
         stackView.alignment = .center
-        stackView.axis = .vertical
-        stackView.distribution = .fillProportionally
+        stackView.axis = .horizontal
+        stackView.spacing = 10
         stackView.backgroundColor = .white
+        
         
         stackView.layer.cornerRadius = 55/2
         
@@ -59,10 +61,12 @@ final class ViewController: UIViewController {
         configDelegate()
         configUI()
         
+        // add subview
         self.view.addSubview(topSearchBar)
-        topSearchBar.addSubview(searchImageView)
-        topSearchBar.addSubview(searchBarTextFiled)
+        topSearchBar.addArrangedSubview(searchImageView)
+        topSearchBar.addArrangedSubview(searchBarTextFiled)
         
+        //auto layout
         autolayout()
     }
     
@@ -83,17 +87,12 @@ final class ViewController: UIViewController {
         }
         
         searchImageView.snp.makeConstraints {
-            $0.left.equalToSuperview().offset(20)
-            $0.width.equalTo(20)
-            $0.centerY.equalToSuperview()
+            $0.size.equalTo(20)
+            $0.left.equalTo(topSearchBar.snp.left).offset(20)
         }
         
         searchBarTextFiled.snp.makeConstraints {
-            $0.left.equalTo(searchImageView.snp.right).offset(10)
-            $0.centerY.equalToSuperview()
-            $0.right.equalToSuperview().offset(-40)
-            $0.height.equalTo(30)
-            
+            $0.right.equalTo(topSearchBar.snp.right).offset(100)
         }
     }
 }
