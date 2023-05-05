@@ -28,32 +28,37 @@ final class ViewController: UIViewController {
         self.view.backgroundColor = .white
         
         let firstElement = MyCardView.generateMyCardView()
+        let secondElement = MyCardView.generateMyCardView()
+        let thirdElement = MyCardView.generateMyCardView()
         
         topStackView.addArrangedSubview(firstElement)
+        topStackView.addArrangedSubview(secondElement)
+        topStackView.addArrangedSubview(thirdElement)
         
         self.view.addSubview(topStackView)
+        topStackView.spacing = 7
         
         // 오토레이아웃 스냅킷 사용
         topStackView.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(100)
+            $0.top.equalTo(self.view.safeAreaLayoutGuide)
             $0.centerX.equalToSuperview()
-            $0.left.equalToSuperview().offset(12)
+            $0.left.equalToSuperview().offset(10)
         }
         
-        firstElement.snp.makeConstraints { make in
-            make.height.equalTo(200)
+        // 겹치는 코드 리팩토링 방법 찾기?
+        firstElement.snp.makeConstraints {
+            $0.height.equalTo(170)
         }
-        
-        // 스냅킷 사용 안할시
-//        NSLayoutConstraint.activate([
-//            topStackView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-//            topStackView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 100),
-//            topStackView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 12),
-//        ])
+        secondElement.snp.makeConstraints {
+            $0.height.equalTo(170)
+        }
+        thirdElement.snp.makeConstraints {
+            $0.height.equalTo(170)
+        }
     }
 }
 
-
+// MARK: - Preview 관련
 #if DEBUG
 
 import SwiftUI

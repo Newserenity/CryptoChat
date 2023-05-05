@@ -48,20 +48,20 @@ class MyCardView: UIView {
         
         
         // autolayout        
-        titleLablel.snp.makeConstraints { make in
-            make.top.left.equalToSuperview().offset(15)
+        titleLablel.snp.makeConstraints {
+            $0.top.left.equalToSuperview().offset(15)
         }
 
-        subtitleLablel.snp.makeConstraints { make in
-            make.width.equalTo(40)
-            make.height.equalTo(25)
-            make.leading.equalTo(titleLablel)
-            make.top.equalTo(titleLablel.snp.bottom).offset(10)
+        subtitleLablel.snp.makeConstraints {
+            $0.width.equalTo(40)
+            $0.height.equalTo(25)
+            $0.leading.equalTo(titleLablel)
+            $0.top.equalTo(titleLablel.snp.bottom).offset(10)
         }
 
-        bottomImageView.snp.makeConstraints { make in
-            make.bottom.equalToSuperview().offset(-10)
-            make.right.equalToSuperview().offset(-10)
+        bottomImageView.snp.makeConstraints {
+            $0.bottom.equalToSuperview().offset(-10)
+            $0.right.equalToSuperview().offset(-10)
         }
     }
 }
@@ -78,7 +78,6 @@ extension MyCardView {
 
 
 // MARK: - Preview 관련
-
 #if DEBUG
 
 import SwiftUI
