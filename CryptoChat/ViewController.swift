@@ -27,9 +27,9 @@ final class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         self.view.backgroundColor = .white
         
-        topStackView.addArrangedSubview(MyCardView.generateMyCardView())
-        topStackView.addArrangedSubview(MyCardView.generateMyCardView())
-        topStackView.addArrangedSubview(MyCardView.generateMyCardView())
+        let firstElement = MyCardView.generateMyCardView()
+        
+        topStackView.addArrangedSubview(firstElement)
         
         self.view.addSubview(topStackView)
         
@@ -39,6 +39,11 @@ final class ViewController: UIViewController {
             $0.centerX.equalToSuperview()
             $0.left.equalToSuperview().offset(12)
         }
+        
+        firstElement.snp.makeConstraints { make in
+            make.height.equalTo(200)
+        }
+        
         // 스냅킷 사용 안할시
 //        NSLayoutConstraint.activate([
 //            topStackView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
