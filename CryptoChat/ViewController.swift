@@ -14,7 +14,7 @@ final class ViewController: UIViewController {
         let stackView = UIStackView()
         
         stackView.alignment = .center
-        stackView.axis = .horizontal
+        stackView.axis = .vertical
         stackView.distribution = .fillProportionally
         stackView.backgroundColor = .white
         
@@ -50,80 +50,14 @@ final class ViewController: UIViewController {
         return searchTextFiled
     }()
     
-    lazy var topCategory: UIStackView = {
-        let stackView = UIStackView()
-        
-        stackView.alignment = .center
-        stackView.axis = .vertical
-        
-        return stackView
-    }()
-    
-    lazy var topCategoryImage1: UIImageView = {
-        let imageView = UIImageView()
-        
-        imageView.image = UIImage(systemName: "magnifyingglass")
-        imageView.contentMode = .scaleAspectFit
-        UIImageView.appearance().tintColor = .black
-        
-        return imageView
-    }()
-    
-    lazy var topCategoryImage2: UIImageView = {
-        let imageView = UIImageView()
-        
-        imageView.image = UIImage(systemName: "magnifyingglass")
-        imageView.contentMode = .scaleAspectFit
-        UIImageView.appearance().tintColor = .black
-        
-        return imageView
-    }()
-    
-    lazy var topCategoryImage3: UIImageView = {
-        let imageView = UIImageView()
-        
-        imageView.image = UIImage(systemName: "magnifyingglass")
-        imageView.contentMode = .scaleAspectFit
-        UIImageView.appearance().tintColor = .black
-        
-        return imageView
-    }()
-    
-    lazy var topCategoryImage4: UIImageView = {
-        let imageView = UIImageView()
-        
-        imageView.image = UIImage(systemName: "magnifyingglass")
-        imageView.contentMode = .scaleAspectFit
-        UIImageView.appearance().tintColor = .black
-        
-        return imageView
-    }()
-    
-    lazy var topCategoryImage5: UIImageView = {
-        let imageView = UIImageView()
-        
-        imageView.image = UIImage(systemName: "magnifyingglass")
-        imageView.contentMode = .scaleAspectFit
-        UIImageView.appearance().tintColor = .black
-        
-        return imageView
-    }()
-    
-    lazy var topCategoryImage6: UIImageView = {
-        let imageView = UIImageView()
-        
-        imageView.image = UIImage(systemName: "magnifyingglass")
-        imageView.contentMode = .scaleAspectFit
-        UIImageView.appearance().tintColor = .black
-        
-        return imageView
-    }()
+
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        delegateConfig()
-        UIConfig()
+        configDelegate()
+        configUI()
         
         self.view.addSubview(topSearchBar)
         topSearchBar.addSubview(searchImageView)
@@ -132,11 +66,11 @@ final class ViewController: UIViewController {
         autolayout()
     }
     
-    private func delegateConfig() {
+    private func configDelegate() {
         searchBarTextFiled.delegate = self
     }
     
-    private func UIConfig() {
+    private func configUI() {
         self.view.backgroundColor = .systemGray6
     }
     

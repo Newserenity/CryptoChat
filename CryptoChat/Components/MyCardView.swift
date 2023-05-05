@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MyCardView: UIView {
+final class MyCardView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -18,7 +18,6 @@ class MyCardView: UIView {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
-    
     
     // 레이아웃 설정
     fileprivate func setuplayout() {
