@@ -7,11 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3D1953AD2A04B50D00CC2769 /* MyCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1953AC2A04B50D00CC2769 /* MyCardView.swift */; };
-		3D1953AF2A053A0300CC2769 /* CategoryBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1953AE2A053A0300CC2769 /* CategoryBar.swift */; };
+		3D1953AD2A04B50D00CC2769 /* RoundBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1953AC2A04B50D00CC2769 /* RoundBadge.swift */; };
+		3D1953AF2A053A0300CC2769 /* HorizontalBadgeBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1953AE2A053A0300CC2769 /* HorizontalBadgeBar.swift */; };
 		3D1953B22A05D80300CC2769 /* Fakery in Frameworks */ = {isa = PBXBuildFile; productRef = 3D1953B12A05D80300CC2769 /* Fakery */; };
 		3D1953B42A05D84E00CC2769 /* ScrollViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1953B32A05D84E00CC2769 /* ScrollViewTest.swift */; };
-		3D58B1B62A077E1300490DC8 /* RoundBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D58B1B52A077E1300490DC8 /* RoundBadge.swift */; };
 		3D58B1B92A077F4F00490DC8 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 3D58B1B82A077F4F00490DC8 /* Then */; };
 		3D68049329F9B75900A48BC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D68049229F9B75900A48BC3 /* AppDelegate.swift */; };
 		3D68049529F9B75900A48BC3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D68049429F9B75900A48BC3 /* SceneDelegate.swift */; };
@@ -48,10 +47,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3D1953AC2A04B50D00CC2769 /* MyCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCardView.swift; sourceTree = "<group>"; };
-		3D1953AE2A053A0300CC2769 /* CategoryBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryBar.swift; sourceTree = "<group>"; };
+		3D1953AC2A04B50D00CC2769 /* RoundBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RoundBadge.swift; path = ../RoundBadge.swift; sourceTree = "<group>"; };
+		3D1953AE2A053A0300CC2769 /* HorizontalBadgeBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalBadgeBar.swift; sourceTree = "<group>"; };
 		3D1953B32A05D84E00CC2769 /* ScrollViewTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollViewTest.swift; sourceTree = "<group>"; };
-		3D58B1B52A077E1300490DC8 /* RoundBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundBadge.swift; sourceTree = "<group>"; };
 		3D68048F29F9B75900A48BC3 /* CryptoChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D68049229F9B75900A48BC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D68049429F9B75900A48BC3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,7 +101,7 @@
 		3D58B1B42A077DE200490DC8 /* Elements */ = {
 			isa = PBXGroup;
 			children = (
-				3D58B1B52A077E1300490DC8 /* RoundBadge.swift */,
+				3D1953AC2A04B50D00CC2769 /* RoundBadge.swift */,
 			);
 			path = Elements;
 			sourceTree = "<group>";
@@ -176,8 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				3D58B1B42A077DE200490DC8 /* Elements */,
-				3D1953AC2A04B50D00CC2769 /* MyCardView.swift */,
-				3D1953AE2A053A0300CC2769 /* CategoryBar.swift */,
+				3D1953AE2A053A0300CC2769 /* HorizontalBadgeBar.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -333,10 +330,9 @@
 				3D7F711B2A023D5000B33DDC /* CustomViewTest.swift in Sources */,
 				3D7F71172A02208F00B33DDC /* UIViewController+Ext.swift in Sources */,
 				3D68049329F9B75900A48BC3 /* AppDelegate.swift in Sources */,
-				3D1953AF2A053A0300CC2769 /* CategoryBar.swift in Sources */,
-				3D1953AD2A04B50D00CC2769 /* MyCardView.swift in Sources */,
+				3D1953AF2A053A0300CC2769 /* HorizontalBadgeBar.swift in Sources */,
+				3D1953AD2A04B50D00CC2769 /* RoundBadge.swift in Sources */,
 				3D68049529F9B75900A48BC3 /* SceneDelegate.swift in Sources */,
-				3D58B1B62A077E1300490DC8 /* RoundBadge.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

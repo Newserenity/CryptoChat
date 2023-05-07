@@ -8,7 +8,7 @@
 import UIKit
 import Then
 
-final class MyCardView: UIView {
+final class RoundBadge: UIView {
     
     var selectedMenuItem: String = "Deafalt"
     
@@ -23,7 +23,7 @@ final class MyCardView: UIView {
     lazy var titleLablelBg = UIView().then {
         $0.backgroundColor = .systemTeal
         $0.layer.masksToBounds = true
-        $0.layer.cornerRadius = 15
+        $0.layer.cornerRadius = 15 //높이에 따라 동적으로 변하게 수정
     }
     
     override init(frame: CGRect) {
@@ -57,12 +57,12 @@ final class MyCardView: UIView {
 }
 
 // MARK: - static 메소드 관련
-extension MyCardView {
+extension RoundBadge {
     
-    /// 카드뷰 만들기
-    /// - Returns: 만들어진 카드뷰
+    /// 벳지 만들기
+    /// - Returns: 만들어진 벳지
     static func generateMyCardView() -> UIView {
-        return MyCardView()
+        return RoundBadge()
     }
 }
 
@@ -72,9 +72,9 @@ extension MyCardView {
 
 import SwiftUI
 
-struct MyCardView_Previews: PreviewProvider {
+struct RoundBadge_Previews: PreviewProvider {
     static var previews: some View {
-        MyCardView()
+        RoundBadge()
             .getPreview()
             .frame(width: 140, height: 50)
             .previewLayout(.sizeThatFits)
