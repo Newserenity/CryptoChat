@@ -6,8 +6,25 @@
 //
 
 import UIKit
+import Then
 
 final class MyCardView: UIView {
+    
+    var selectedMenuItem: String = "Deafalt"
+    
+    lazy var titleLablel = UILabel().then {
+        $0.text = selectedMenuItem
+        $0.font = UIFont.systemFont(ofSize: 14)
+        $0.textAlignment = .center
+        $0.textColor = .white
+        $0.numberOfLines = 1
+    }
+    
+    lazy var titleLablelBg = UIView().then {
+        $0.backgroundColor = .systemTeal
+        $0.layer.masksToBounds = true
+        $0.layer.cornerRadius = 15
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -21,47 +38,21 @@ final class MyCardView: UIView {
     
     // 레이아웃 설정
     fileprivate func setuplayout() {
-        self.backgroundColor = .systemYellow
-        self.layer.cornerRadius = 15
-        
-        let titleLablel = UILabel()
-        titleLablel.text = "사운드\n테라피"
-        titleLablel.numberOfLines = 0 //0으로 하면 여러 행 가능
-        
-        let subtitleLablel = UILabel()
-        subtitleLablel.text = "무료"
-        subtitleLablel.font = UIFont.systemFont(ofSize: 13)
-        subtitleLablel.textAlignment = .center
-        subtitleLablel.textColor = .white
-        subtitleLablel.backgroundColor = .systemTeal
-        subtitleLablel.layer.masksToBounds = true
-        subtitleLablel.layer.cornerRadius = subtitleLablel.intrinsicContentSize.width/2
-        
-        let bottomImageView = UIImageView(image: UIImage(systemName: "pencil.slash"))
-        bottomImageView.contentMode = .scaleAspectFit
-                
         //add subview
-        self.addSubview(titleLablel)
-        self.addSubview(subtitleLablel)
-        self.addSubview(bottomImageView)
+        self.addSubview(titleLablelBg)
+        titleLablelBg.addSubview(titleLablel)
         
+        titleLablelBg.snp.makeConstraints {
+            $0.centerX.centerY.equalToSuperview()
+        }
         
-        // autolayout        
         titleLablel.snp.makeConstraints {
-            $0.top.left.equalToSuperview().offset(15)
+            $0.height.equalTo(20)
+            $0.width.lessThanOrEqualTo(100)
+            $0.edges.equalToSuperview().inset(UIEdgeInsets(top: 5, left: 15, bottom: 5, right: 15))
+            
         }
-
-        subtitleLablel.snp.makeConstraints {
-            $0.width.equalTo(40)
-            $0.height.equalTo(25)
-            $0.leading.equalTo(titleLablel)
-            $0.top.equalTo(titleLablel.snp.bottom).offset(10)
-        }
-
-        bottomImageView.snp.makeConstraints {
-            $0.bottom.equalToSuperview().offset(-10)
-            $0.right.equalToSuperview().offset(-10)
-        }
+        
     }
 }
 
@@ -85,7 +76,7 @@ struct MyCardView_Previews: PreviewProvider {
     static var previews: some View {
         MyCardView()
             .getPreview()
-            .frame(width: 130, height: 170)
+            .frame(width: 140, height: 50)
             .previewLayout(.sizeThatFits)
         
     }

@@ -19,7 +19,7 @@ final class CategoryBar: UIStackView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    lazy var topCategoryImage1: UIImageView = {
+    fileprivate lazy var topCategoryImage1: UIImageView = {
         let imageView = UIImageView()
         
         imageView.image = UIImage(systemName: "magnifyingglass")
@@ -29,7 +29,7 @@ final class CategoryBar: UIStackView {
         return imageView
     }()
     
-    lazy var topCategoryImage2: UIImageView = {
+    fileprivate lazy var topCategoryImage2: UIImageView = {
         let imageView = UIImageView()
         
         imageView.image = UIImage(systemName: "magnifyingglass")
@@ -39,7 +39,7 @@ final class CategoryBar: UIStackView {
         return imageView
     }()
     
-    lazy var topCategoryImage3: UIImageView = {
+    fileprivate lazy var topCategoryImage3: UIImageView = {
         let imageView = UIImageView()
         
         imageView.image = UIImage(systemName: "magnifyingglass")
@@ -49,7 +49,7 @@ final class CategoryBar: UIStackView {
         return imageView
     }()
     
-    lazy var topCategoryImage4: UIImageView = {
+    fileprivate lazy var topCategoryImage4: UIImageView = {
         let imageView = UIImageView()
         
         imageView.image = UIImage(systemName: "magnifyingglass")
@@ -59,7 +59,7 @@ final class CategoryBar: UIStackView {
         return imageView
     }()
     
-    lazy var topCategoryImage5: UIImageView = {
+    fileprivate lazy var topCategoryImage5: UIImageView = {
         let imageView = UIImageView()
         
         imageView.image = UIImage(systemName: "magnifyingglass")
@@ -69,7 +69,7 @@ final class CategoryBar: UIStackView {
         return imageView
     }()
     
-    lazy var topCategoryImage6: UIImageView = {
+    fileprivate lazy var topCategoryImage6: UIImageView = {
         let imageView = UIImageView()
         
         imageView.image = UIImage(systemName: "magnifyingglass")
@@ -84,7 +84,7 @@ final class CategoryBar: UIStackView {
     fileprivate func layoutConfig() {
         // layout
         self.alignment = .fill
-        self.distribution = .equalSpacing
+        self.distribution = .fillEqually
         self.axis = .horizontal
         self.spacing = 10
         

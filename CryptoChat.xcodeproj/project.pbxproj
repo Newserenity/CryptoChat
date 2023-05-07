@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		3D1953AD2A04B50D00CC2769 /* MyCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1953AC2A04B50D00CC2769 /* MyCardView.swift */; };
 		3D1953AF2A053A0300CC2769 /* CategoryBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1953AE2A053A0300CC2769 /* CategoryBar.swift */; };
+		3D1953B22A05D80300CC2769 /* Fakery in Frameworks */ = {isa = PBXBuildFile; productRef = 3D1953B12A05D80300CC2769 /* Fakery */; };
+		3D1953B42A05D84E00CC2769 /* ScrollViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1953B32A05D84E00CC2769 /* ScrollViewTest.swift */; };
+		3D58B1B62A077E1300490DC8 /* RoundBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D58B1B52A077E1300490DC8 /* RoundBadge.swift */; };
+		3D58B1B92A077F4F00490DC8 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 3D58B1B82A077F4F00490DC8 /* Then */; };
 		3D68049329F9B75900A48BC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D68049229F9B75900A48BC3 /* AppDelegate.swift */; };
 		3D68049529F9B75900A48BC3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D68049429F9B75900A48BC3 /* SceneDelegate.swift */; };
 		3D68049729F9B75900A48BC3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D68049629F9B75900A48BC3 /* ViewController.swift */; };
@@ -46,6 +50,8 @@
 /* Begin PBXFileReference section */
 		3D1953AC2A04B50D00CC2769 /* MyCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCardView.swift; sourceTree = "<group>"; };
 		3D1953AE2A053A0300CC2769 /* CategoryBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryBar.swift; sourceTree = "<group>"; };
+		3D1953B32A05D84E00CC2769 /* ScrollViewTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollViewTest.swift; sourceTree = "<group>"; };
+		3D58B1B52A077E1300490DC8 /* RoundBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundBadge.swift; sourceTree = "<group>"; };
 		3D68048F29F9B75900A48BC3 /* CryptoChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D68049229F9B75900A48BC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D68049429F9B75900A48BC3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +75,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D58B1B92A077F4F00490DC8 /* Then in Frameworks */,
+				3D1953B22A05D80300CC2769 /* Fakery in Frameworks */,
 				3D6804CD29F9B86200A48BC3 /* SwiftyJSON in Frameworks */,
 				3D6804C729F9B80600A48BC3 /* Alamofire in Frameworks */,
 				3D6804CA29F9B83800A48BC3 /* SnapKit in Frameworks */,
@@ -92,6 +100,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D58B1B42A077DE200490DC8 /* Elements */ = {
+			isa = PBXGroup;
+			children = (
+				3D58B1B52A077E1300490DC8 /* RoundBadge.swift */,
+			);
+			path = Elements;
+			sourceTree = "<group>";
+		};
 		3D68048629F9B75900A48BC3 = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +135,7 @@
 				3D68049429F9B75900A48BC3 /* SceneDelegate.swift */,
 				3D90C5002A036AB10053A549 /* Components */,
 				3D68049629F9B75900A48BC3 /* ViewController.swift */,
+				3D1953B32A05D84E00CC2769 /* ScrollViewTest.swift */,
 				3D7F711A2A023D5000B33DDC /* CustomViewTest.swift */,
 				3D7F71152A02206000B33DDC /* Extention */,
 				3D68049E29F9B75A00A48BC3 /* Assets.xcassets */,
@@ -158,6 +175,7 @@
 		3D90C5002A036AB10053A549 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				3D58B1B42A077DE200490DC8 /* Elements */,
 				3D1953AC2A04B50D00CC2769 /* MyCardView.swift */,
 				3D1953AE2A053A0300CC2769 /* CategoryBar.swift */,
 			);
@@ -184,6 +202,8 @@
 				3D6804C629F9B80600A48BC3 /* Alamofire */,
 				3D6804C929F9B83800A48BC3 /* SnapKit */,
 				3D6804CC29F9B86200A48BC3 /* SwiftyJSON */,
+				3D1953B12A05D80300CC2769 /* Fakery */,
+				3D58B1B82A077F4F00490DC8 /* Then */,
 			);
 			productName = CryptoChat;
 			productReference = 3D68048F29F9B75900A48BC3 /* CryptoChat.app */;
@@ -261,6 +281,8 @@
 				3D6804C529F9B80600A48BC3 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				3D6804C829F9B83800A48BC3 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				3D6804CB29F9B86200A48BC3 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				3D1953B02A05D80300CC2769 /* XCRemoteSwiftPackageReference "Fakery" */,
+				3D58B1B72A077F4F00490DC8 /* XCRemoteSwiftPackageReference "Then" */,
 			);
 			productRefGroup = 3D68049029F9B75900A48BC3 /* Products */;
 			projectDirPath = "";
@@ -307,12 +329,14 @@
 				3D68049D29F9B75900A48BC3 /* CryptoChat.xcdatamodeld in Sources */,
 				3D68049729F9B75900A48BC3 /* ViewController.swift in Sources */,
 				3D7F71192A0239AD00B33DDC /* UIView+Ext.swift in Sources */,
+				3D1953B42A05D84E00CC2769 /* ScrollViewTest.swift in Sources */,
 				3D7F711B2A023D5000B33DDC /* CustomViewTest.swift in Sources */,
 				3D7F71172A02208F00B33DDC /* UIViewController+Ext.swift in Sources */,
 				3D68049329F9B75900A48BC3 /* AppDelegate.swift in Sources */,
 				3D1953AF2A053A0300CC2769 /* CategoryBar.swift in Sources */,
 				3D1953AD2A04B50D00CC2769 /* MyCardView.swift in Sources */,
 				3D68049529F9B75900A48BC3 /* SceneDelegate.swift in Sources */,
+				3D58B1B62A077E1300490DC8 /* RoundBadge.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -658,6 +682,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		3D1953B02A05D80300CC2769 /* XCRemoteSwiftPackageReference "Fakery" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/vadymmarkov/Fakery";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		3D58B1B72A077F4F00490DC8 /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 		3D6804C529F9B80600A48BC3 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -685,6 +725,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		3D1953B12A05D80300CC2769 /* Fakery */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3D1953B02A05D80300CC2769 /* XCRemoteSwiftPackageReference "Fakery" */;
+			productName = Fakery;
+		};
+		3D58B1B82A077F4F00490DC8 /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3D58B1B72A077F4F00490DC8 /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
 		3D6804C629F9B80600A48BC3 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 3D6804C529F9B80600A48BC3 /* XCRemoteSwiftPackageReference "Alamofire" */;

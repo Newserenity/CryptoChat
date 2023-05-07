@@ -24,7 +24,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: UIScreen.main.bounds)
         // 처음보일 view controller
-        let viewController = ViewController()
+        let viewController = ScrollViewTest()
         // 위 VC를 첫 화면으로 띄우기
         window?.rootViewController = viewController
         // 화면에 보이게끔 하기
